@@ -1,0 +1,292 @@
+/* Generic */
+html {
+  font-family: "Public Sans", sans-serif;
+  color: #732104;
+}
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+/* Header */
+
+#logo {
+  height: 40px;
+}
+
+#shopNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+li img {
+  margin-right: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  background-color: #fef7e2;
+}
+
+nav li {
+  margin: 1em;
+  background-color: #ffdf7f;
+  border-radius: 50px;
+  padding: 1em;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+.unselectedNav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectedNav {
+  font-size: 1.25em;
+  flex-grow: 1.5;
+}
+/* Main */
+
+.productCard {
+  background-color: #fef7e2;
+  border-radius: 50px;
+  width: 375px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  margin: 2em;
+}
+.imgContainer {
+  height: 250px;
+  background-image: url(../imgs/honey.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.origin {
+  margin: 0;
+}
+
+.origin,
+.productPrice {
+  font-weight: 600;
+}
+
+.productTypeAndOrigin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addToCart {
+  display: flex;
+  justify-content: center;
+}
+.cartButton {
+  color: inherit;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #ffdf7f;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 60px;
+}
+
+/* ASIDE */
+
+#flexibleArticle {
+  background-color: #fef7e2;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5em;
+}
+
+#articlePic {
+  height: 350px;
+  margin-right: 2em;
+}
+
+#articleContent {
+  align-self: flex-start;
+}
+
+#articleContent h4 {
+  margin-top: 0;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    margin: 1em;
+  }
+
+  nav ul {
+    height: 250px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 80px;
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  .selectedNav {
+    order: 1;
+    width: 80%;
+  }
+  .unselectedNav {
+    width: 35%;
+    order: 2;
+  }
+  nav li {
+    margin: 0 1em;
+  }
+  h1,
+  h3 {
+    text-align: center;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #flexibleArticle {
+    flex-direction: column-reverse;
+  }
+  #articlePic {
+    height: 250px;
+    margin-top: 2em;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  #productsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .productCard {
+    width: 36vw;
+    margin: 1em;
+  }
+  .imgContainer {
+    height: 26vw;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  .origin,
+  .productPrice {
+    font-size: 0.9em;
+  }
+  .cartButton {
+    padding: 10px 40px;
+  }
+  #flexibleArticle {
+    flex-direction: column-reverse;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  #articlePic {
+    width: 90vw;
+    height: 60vw;
+    margin-top: 2em;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  nav ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 23vw;
+    height: 100%;
+  }
+  .unselectedNav {
+    font-size: 1.25em;
+    order: 2;
+  }
+  .selectedNav {
+    font-size: 1.5em;
+    order: 1;
+  }
+  nav li {
+    padding: 1.5em 2em;
+  }
+  header {
+    height: 100%;
+  }
+  h1 {
+    margin-left: 2em;
+    font-size: 3em;
+    font-weight: 800;
+  }
+  #productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .productCard {
+    width: 18vw;
+    margin: 1em;
+  }
+  .imgContainer {
+    height: 12vw;
+  }
+  .cartButton {
+    padding: 10px 40px;
+  }
+  main,
+  aside {
+    width: 77vw;
+  }
+  #flexibleArticle {
+    flex-direction: column-reverse;
+  }
+  #articlePic {
+    height: 250px;
+    margin-top: 2em;
+    margin-right: 0;
+  }
+}
